@@ -16,7 +16,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Todos = ({ getTodos, todos, deleteTodo, completeTodo }) => {
-  const [pages] = useState(todos?.length / 20);
   const [currentPage, setCurrentPage] = useState(1);
   const fetchTodosRef = useRef(() => {
     getTodos();
@@ -125,7 +124,7 @@ const Todos = ({ getTodos, todos, deleteTodo, completeTodo }) => {
         <Pagination.Next
           onClick={goToNextPage}
           className="next"
-          disabled={currentPage === pages}
+          disabled={currentPage === todos?.length / 20}
         />
       </Pagination>
     </Container>
