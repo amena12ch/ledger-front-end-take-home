@@ -10,7 +10,6 @@ import { Container } from "react-bootstrap";
 import Pagination from "react-bootstrap/Pagination";
 
 const Posts = ({ getPosts, posts }) => {
-  const [pages] = useState(posts?.length / 10);
   const [currentPage, setCurrentPage] = useState(1);
   const fetchPostsRef = useRef(() => {
     getPosts();
@@ -93,7 +92,7 @@ const Posts = ({ getPosts, posts }) => {
           <Pagination.Next
             onClick={goToNextPage}
             className="next"
-            disabled={currentPage === pages}
+            disabled={currentPage === posts?.length / 10}
           />
         </Pagination>
       </Container>
