@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import Pagination from "react-bootstrap/Pagination";
 
 const Albums = ({ getAlbums, albums }) => {
-  const [pages] = useState(albums?.length / 20);
   const [currentPage, setCurrentPage] = useState(1);
   const fetchDataRef = useRef(() => {
     getAlbums();
@@ -94,7 +93,7 @@ const Albums = ({ getAlbums, albums }) => {
         <Pagination.Next
           onClick={goToNextPage}
           className="next"
-          disabled={currentPage === pages}
+          disabled={currentPage === albums?.length / 20}
         />
       </Pagination>
     </Container>
