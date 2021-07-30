@@ -3,7 +3,7 @@
 ## Content
 
 This project contains three main parts
-- list of post: you can check one post's details and post a comment
+- list of posts: you can check one post's details and post a comment
 - list of albums and photos of each album
 - todo list: you can flag one todo as complete and you can delete any todo
 
