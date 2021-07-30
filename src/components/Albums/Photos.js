@@ -9,7 +9,6 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Pagination from "react-bootstrap/Pagination";
 
 const Photos = ({ getPhotos, photos, match }) => {
-  const [pages] = useState(photos?.length / 10);
   const [currentPage, setCurrentPage] = useState(1);
   const { id } = match?.params;
   const fetchPhotoListRef = useRef(() => {
@@ -88,7 +87,7 @@ const Photos = ({ getPhotos, photos, match }) => {
         <Pagination.Next
           onClick={goToNextPage}
           className="next"
-          disabled={currentPage === pages}
+          disabled={currentPage === photos?.length / 10}
         />
       </Pagination>
     </Container>
