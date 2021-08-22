@@ -1,0 +1,37 @@
+form {
+    display: flex;
+    flex-direction: column;
+  }
+input {
+    font-family: "Darker Grotesque", sans-serif;
+    border-radius: 15px;
+    border: 1px solid #787878;
+    padding: 5px 5px 5px 10px;
+    transition: 0.2s;
+    margin-top: 10px
+  }
+  input:focus {
+    outline: none;
+    border: 1px solid rgba(61, 133, 155, 0.753);
+  }
+  input::placeholder {
+    color: #bebebe;
+  }
+  textarea {
+    font-family: "Darker Grotesque", sans-serif;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid #787878;
+    padding: 5px 5px 5px 10px;
+    height: 70px;
+    transition: 0.2s;
+    box-sizing: border-box;
+    resize: none;
+  }
+  textarea:focus {
+    outline: none;
+    border: 1px solid rgba(61, 133, 155, 0.753);
+  }
+  textarea::placeholder {
+    color: #bebebe;
+  }

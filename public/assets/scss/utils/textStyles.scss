@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+* {
+    font-family: "Roboto", sans-serif;
+  }
+h2 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+h3 {
+  margin: 0;
+}
+small {
+  color: #e0dfdf;
+  font-size: 10px;
+  padding-right: 25px;
+}
+
+.titleContainer {
+  margin: 25px;
+  text-align: center;
+}
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(165, 161, 161);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  letter-spacing: -1px;
+  line-height: 1;
+}

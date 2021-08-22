@@ -1,0 +1,82 @@
+.button {
+    display: inline-flex;
+    background: #fff;
+    border: 1px solid rgb(148, 148, 148);
+    vertical-align: top;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1.5;
+    cursor: pointer;
+    padding: 0.5rem 1.9rem;
+    font-size: 15px;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    -webkit-transition: background-color 0.8ms;
+    -moz-transition: background-color 0.8ms;
+    -ms-transition: background-color 0.8ms;
+    -o-transition: background-color 0.8ms;
+    transition: background-color 0.8ms;
+    a{
+      text-decoration: none;
+      color: #252a3b;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &:hover {
+      background-color: darken(#fff, 4%);
+    }
+  }
+  .button--secondary {
+    color: #fff;
+    background-color: rgb(151, 151, 151);
+    border-color: rgb(151, 151, 151);
+  
+    &:hover {
+      background-color: darken(rgb(151, 151, 151), 4%);
+    }
+  }
+  .button--primary {
+    color: #fff;
+    background-color: rgba(61, 133, 155, 0.753);
+    border-color: rgba(61, 133, 155, 0.753);
+  
+    &:hover {
+      background-color: darken(rgba(61, 133, 155, 0.753), 4%);
+    }
+  }
+  .button--completed {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  
+    &:hover {
+      background-color: darken(#4cae4c, 4%);
+    }
+  } 
+  .button--delete {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+  
+    &:hover {
+      background-color: darken(#d43f3a, 4%);
+    }
+  }
+  
+  .btn--xl {
+    padding: 1.3rem 3rem;
+  }
+  
+  .btn--sm {
+    padding: 0.3rem 1.6rem;
+  }
+  .btn--rounded {
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+  }
+  

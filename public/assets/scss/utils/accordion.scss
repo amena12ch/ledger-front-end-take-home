@@ -1,0 +1,30 @@
+.accordion {
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      transition: all 0.1s linear;
+      max-width: 90%;
+      span {
+        transform-origin: center center;
+        transition: all 0.1s linear;
+        height: 24px;
+      }
+  
+      &.active {
+        span {
+          transform: rotate(45deg);
+          transform-origin: center center;
+          transition: all 0.1s linear;
+        }
+      }
+    }
+    &-content {
+      display: none;
+      padding: 20px;
+      max-width: 100%;
+    }
+  }

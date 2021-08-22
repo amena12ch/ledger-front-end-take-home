@@ -1,0 +1,11 @@
+{
+  "short_name": "Ledger Front End Take Home",
+  "name": "Front End Take Home Using React",
+  "icons": [
+    
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
