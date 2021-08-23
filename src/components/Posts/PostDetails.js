@@ -54,18 +54,18 @@ const PostDetails = ({
     setComment("");
   };
   return (
-    <div className="postDetails">
-      <div className="commentBox">
+    <div className="post-details">
+      <div className="post-details-box">
         <div className="post">
-          <div className="postBody">
+          <div className="post-body">
             <img className="image" src="/assets/images/user.jpg" alt="post user" />{" "}
-            <div className="postContent">
-              <div className="postHeader">
-                <h4 className="postTitle">{post?.title}</h4>
+            <div className="post-content">
+              <div className="post-header">
+                <h4 className="post-title">{post?.title}</h4>
               </div>
-              <span className="postText">{post?.body}</span>
-              <div className="postDesc">
-                <span className="desc">
+              <span className="post-text">{post?.body}</span>
+              <div className="post-icon">
+                <span className="icon-class">
                   <FontAwesomeIcon icon={faComment} />
                   <span>{comments?.length}</span> Comments
                 </span>
@@ -75,7 +75,7 @@ const PostDetails = ({
           <div className={`accordion ${active ? "active" : ""}`}>
             <div className="accordion-title">
               Your Comment
-              <span className="desc plus" onClick={() => setActive(!active)}>
+              <span className="icon-class plus" onClick={() => setActive(!active)}>
                 <FontAwesomeIcon icon={faPlus} />
               </span>
             </div>
@@ -83,7 +83,7 @@ const PostDetails = ({
               className="accordion-content"
               style={{ display: active ? "block" : "none" }}
             >
-              <form onSubmit={submitAddComment} className="createComment">
+              <form onSubmit={submitAddComment} className="create-comment">
                 <input
                   type="text"
                   placeholder="Title"
@@ -115,15 +115,15 @@ const PostDetails = ({
           <div className="comment" key={index}>
             <img
               src="/assets/images/user.jpg"
-              className="image commentPic"
+              className="image comment-img"
               alt="user Pic"
             />
-            <div className="commentBody">
-              <div className="commentHeader">
-                <h5 className="commentTitle">{comment?.name}</h5>
-                <span className="commentAuthor">{comment?.email}</span>
+            <div className="comment-body">
+              <div className="comment-header">
+                <h5 className="comment-title">{comment?.name}</h5>
+                <span className="comment-author">{comment?.email}</span>
               </div>
-              <span className="commentContent">{comment?.body}</span>
+              <span className="comment-content">{comment?.body}</span>
             </div>
           </div>
         ))}
