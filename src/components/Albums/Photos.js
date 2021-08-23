@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import React, { useEffect, useRef, useState } from "react";
 import { getPhotos } from "../../store/Albums/AlbumsAction";
 const Photos = ({ getPhotos, photos, match }) => {
-  const [pages] = useState(photos?.length / 10);
   const [currentPage, setCurrentPage] = useState(1);
   const { id } = match?.params;
   const fetchPhotoListRef = useRef(() => {
@@ -43,7 +42,7 @@ const Photos = ({ getPhotos, photos, match }) => {
           {getPaginatedPhotos()?.map((photo, index) => (
             <div className="box" key={index}>
               <div className="boxInner">
-                <img variant="top" src={photo?.url} alt=""/>
+                <img variant="top" src={photo?.url} alt="" />
                 <div className="titleBox">{photo?.title}</div>
               </div>
             </div>
@@ -54,7 +53,7 @@ const Photos = ({ getPhotos, photos, match }) => {
         <li
           onClick={goToPreviousPage}
           className="pageNumber"
-          disabled={currentPage === 1}
+          style={{ display: currentPage === 1 ? "none" : "block" }}
         >
           <a href="# " className="prev">
             &laquo; Prev
@@ -71,7 +70,7 @@ const Photos = ({ getPhotos, photos, match }) => {
         ))}
         <li
           onClick={goToNextPage}
-          disabled={currentPage === pages}
+          style={{ display: currentPage === photos?.length / 10 ? "none" : "block" }}
           className="pageNumber"
         >
           <a href="# " className="next">
