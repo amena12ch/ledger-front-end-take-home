@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookReader } from "@fortawesome/free-solid-svg-icons";
 const Posts = ({ getPosts, posts }) => {
-  const [pages] = useState(posts?.length / 10);
   const [currentPage, setCurrentPage] = useState(1);
   const fetchPostsRef = useRef(() => {
     getPosts();
@@ -68,7 +67,7 @@ const Posts = ({ getPosts, posts }) => {
         <li
           onClick={goToPreviousPage}
           className="pageNumber"
-          disabled={currentPage === 1}
+          style={{ display: currentPage === 1 ? "none" : "block" }}
         >
           <a href="# " className="prev">
             &laquo; Prev
@@ -85,7 +84,7 @@ const Posts = ({ getPosts, posts }) => {
         ))}
         <li
           onClick={goToNextPage}
-          disabled={currentPage === pages}
+          style={{ display: currentPage === posts?.length / 10 ? "none" : "block" }}
           className="pageNumber"
         >
           <a href="# " className="next">
