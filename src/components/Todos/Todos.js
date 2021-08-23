@@ -108,7 +108,7 @@ const Todos = ({ getTodos, todos, deleteTodo, completeTodo }) => {
         <li
           onClick={goToPreviousPage}
           className="pageNumber"
-          disabled={currentPage === 1}
+          style={{ display: currentPage === 1 ? "none" : "block" }}
         >
           <a href="# " className="prev">
             &laquo; Prev
@@ -125,7 +125,9 @@ const Todos = ({ getTodos, todos, deleteTodo, completeTodo }) => {
         ))}
         <li
           onClick={goToNextPage}
-          disabled={currentPage === todos?.length / 20}
+          style={{
+            display: currentPage === todos?.length / 20 ? "none" : "block",
+          }}
           className="pageNumber"
         >
           <a href="# " className="next">
