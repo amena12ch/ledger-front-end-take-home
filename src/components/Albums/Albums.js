@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhotoVideo } from "@fortawesome/free-solid-svg-icons";
 const Albums = ({ getAlbums, albums }) => {
-  const [pages] = useState(albums?.length / 20);
   const [currentPage, setCurrentPage] = useState(1);
   const fetchDataRef = useRef(() => {
     getAlbums();
@@ -58,7 +57,7 @@ const Albums = ({ getAlbums, albums }) => {
         <li
           onClick={goToPreviousPage}
           className="pageNumber"
-          disabled={currentPage === 1}
+          style={{ display: currentPage === 1 ? "none" : "block" }}
         >
           <a href="# " className="prev">
             &laquo; Prev
@@ -75,7 +74,7 @@ const Albums = ({ getAlbums, albums }) => {
         ))}
         <li
           onClick={goToNextPage}
-          disabled={currentPage === pages}
+          style={{ display: currentPage === albums?.length / 20 ? "none" : "block" }}
           className="pageNumber"
         >
           <a href="# " className="next">
